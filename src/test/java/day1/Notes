@@ -1,0 +1,18 @@
+TestNG:  Annotations, Assertions
+
+Test NG is a unit testing framework. (Test NG (Text-Next Generation) . It has flexiblity with annotations, data provider, priorities, dependencies, ignore test. Junit is mostlyl known alternative for TestNG.
+
+Some Fundamental Annotations:
+
+@Test: This is the main annotation. Makes the test runnable.
+
+@BeforeClass: Get executed once before all tests.
+
+@AfterClass: Gets executed once after all tests.
+
+@Before Method : Gets executed before each test.
+
+@AfterMethod: Gets executed after each test.
+
+Note: There are some more annotations like (BeforeSuit, AfterSuit, BeforeTest, AfterTest) . These are mostly used with XML.
+

@@ -13,8 +13,6 @@ public class UsualSetUp {
     // Hooks Class (This is about cucumber)
 
     WebDriver driver;
-
-
     @BeforeMethod
     public void setUp() {
 
@@ -24,7 +22,6 @@ public class UsualSetUp {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
-
 
     @Test
     public void test() throws InterruptedException {
