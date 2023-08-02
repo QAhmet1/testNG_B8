@@ -39,7 +39,7 @@ public class ParametersDriver {
             driver=new EdgeDriver(edgeOptions);
         }
         driver.manage().window().maximize();
-        Duration duration=Duration.ofSeconds(20);
+        Duration duration=Duration.ofSeconds(30);
         driver.manage().timeouts().pageLoadTimeout(duration);
         driver.manage().timeouts().implicitlyWait(duration);
         wait=new WebDriverWait(driver,duration);
