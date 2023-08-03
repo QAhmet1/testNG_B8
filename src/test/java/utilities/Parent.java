@@ -3,6 +3,7 @@ package utilities;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import java.io.File;
 import java.io.IOException;
@@ -44,6 +45,16 @@ public class Parent extends BaseDriver {
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
         }
+    }
+
+    public static void clickFunction(WebElement element){
+        element.click();
+
+    }
+
+    public static void sendKeysFunction(WebElement element,String value){
+       element.sendKeys(value);
+
     }
 
 }

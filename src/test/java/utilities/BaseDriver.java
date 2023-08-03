@@ -48,6 +48,7 @@ public class BaseDriver {
     public void endTransactions()
     {
         System.out.println("end transactions ...");
+        Parent.waitFunc(3);
         driver.quit();
     }
 
