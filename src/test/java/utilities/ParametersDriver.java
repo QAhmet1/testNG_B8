@@ -23,6 +23,7 @@ public class ParametersDriver {
     @BeforeClass
     @Parameters("browser")
     public static void generateDriver(String browserName){
+        closePreviousDrivers();
         Logger logger=Logger.getLogger("");
         logger.setLevel(Level.SEVERE);
 
@@ -47,11 +48,11 @@ public class ParametersDriver {
 
     @AfterClass
     public static void quitDriver(){
-        Parent.waitFunc(3);
+        Parent.waitFunc(6);
         driver.quit();
     }
 
-    public void closePreviousDrivers() {
+    public static  void closePreviousDrivers() {
         try {
             Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
         } catch (IOException e) {

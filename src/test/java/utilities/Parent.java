@@ -1,15 +1,23 @@
 package utilities;
 
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+
 import java.io.File;
 import java.io.IOException;
+import java.rmi.server.ExportException;
 
 
 public class Parent extends BaseDriver {
+    static WebDriverWait wait;
 
     public static void waitFunc(int second){
         try {
@@ -53,8 +61,13 @@ public class Parent extends BaseDriver {
     }
 
     public static void sendKeysFunction(WebElement element,String value){
+        element.clear();
        element.sendKeys(value);
 
+    }
+
+    public static void verifySuccessMsg(WebElement el, String text){
+        Assert.assertTrue(el.getText().toLowerCase().contains(text));
     }
 
 }
